@@ -16,7 +16,7 @@ export class Topic extends CompositeLearningObject {
 
   constructor(parent: LearningObject) {
     super(parent);
-    super.los = reapLos(this);
+    this.los = reapLos(this);
     this.icon = 'film';
     this.reap('topic');
     this.talks = this.los.filter(lo => lo instanceof Talk);

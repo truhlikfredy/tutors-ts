@@ -6,7 +6,7 @@ const glob = require('glob');
 import * as sh from 'shelljs';
 import {publishTemplate} from './loutils';
 
-export class Chapter {
+interface Chapter {
   file: string;
   title: string;
   shortTitle: string;

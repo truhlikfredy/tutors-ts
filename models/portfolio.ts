@@ -49,8 +49,8 @@ export class Portfolio extends CompositeLearningObject {
 
     publishTemplate(absPath, 'index.html', 'portfolio.html', this);
 
-    for (let courseGroup of this.courseGroups) {
-      for (let course of courseGroup.courses) {
+    for (const courseGroup of this.courseGroups) {
+      for (const course of courseGroup.courses) {
         const coursePath = absPath + '/' + course.folder;
         verifyFolder(coursePath);
         sh.cd(course.folder);
@@ -59,8 +59,8 @@ export class Portfolio extends CompositeLearningObject {
       }
     }
 
-    for (let courseGroup of this.courseGroups) {
-      for (let course of courseGroup.courses) {
+    for (const courseGroup of this.courseGroups) {
+      for (const course of courseGroup.courses) {
         const coursePath = absPath + '/' + course.folder;
         verifyFolder(coursePath);
         sh.cd(course.folder);
